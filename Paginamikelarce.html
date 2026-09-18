@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mikel Arce | Arte Sonoro, Cerámica & Docencia UPV/EHU</title>
+  <style>
+    :root {
+      --bg: #0f1115;
+      --card-bg: #171a21;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-warm: #f59e0b;
+      --border: #232834;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(15, 17, 21, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+    header h1 { font-size: 1.15rem; letter-spacing: 0.5px; }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--accent); }
+    .container { max-width: 1040px; margin: 0 auto; padding: 3rem 1.5rem; }
+
+    /* Hero */
+    .hero { padding: 3.5rem 0 2.5rem; border-bottom: 1px solid var(--border); margin-bottom: 3.5rem; }
+    .hero h2 { font-size: 2.8rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .hero p.tagline { font-size: 1.2rem; color: var(--accent); margin-bottom: 1.2rem; }
+    .hero p.desc { max-width: 800px; color: var(--muted); font-size: 1.05rem; }
+    .hero-links { margin-top: 1.5rem; display: flex; gap: 1rem; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .btn-primary { background: var(--accent); color: #000; }
+    .btn-yt { background: #cc0000; color: #fff; }
+
+    /* Secciones */
+    .section-title {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+      border-left: 3px solid var(--accent);
+      padding-left: 0.8rem;
+    }
+    
+    /* Grid de Obras */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 1.75rem; margin-bottom: 4rem; }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      background: #000;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%; border: 0;
+    }
+    .card-img-placeholder {
+      height: 200px;
+      background: #1c212b;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+      padding: 1rem;
+    }
+    .card-body { padding: 1.25rem; flex-grow: 1; }
+    .card-body h3 { font-size: 1.15rem; margin-bottom: 0.3rem; color: #fff; }
+    .card-body .badge { font-size: 0.75rem; color: var(--accent); margin-bottom: 0.6rem; display: block; text-transform: uppercase; letter-spacing: 0.5px; }
+    .card-body p { font-size: 0.9rem; color: var(--muted); }
+
+    /* Bloque Docencia & Másteres */
+    .docencia-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.25rem; margin-bottom: 4rem; }
+    .doc-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+    .doc-box h4 { color: #fff; font-size: 1.05rem; margin-bottom: 0.5rem; }
+    .doc-box p { font-size: 0.9rem; color: var(--muted); margin-bottom: 0.8rem; }
+    .doc-box a { color: var(--accent); text-decoration: none; font-size: 0.85rem; font-weight: 500; }
+    .doc-box a:hover { text-decoration: underline; }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--border); padding: 2.5rem 0; text-align: center; color: var(--muted); font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>MIKEL ARCE</h1>
+    <nav>
+      <a href="#obras">Instalaciones & Obras</a>
+      <a href="#ceramica">Cerámica & Materia</a>
+      <a href="#docencia">Docencia & Másteres</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <h2>Mikel Arce Sagarduy</h2>
+      <p class="tagline">Arte Sonoro · Escultura & Nuevos Medios · UPV/EHU</p>
+      <p class="desc">
+        Doctor en Bellas Artes y Profesor Titular en el Departamento de Escultura y de Arte y Tecnología de la Universidad del País Vasco. Su trayectoria indaga en las propiedades espaciales, fenomenológicas y constructivas del sonido, así como en la hibridación entre tecnología, materia y experimentación escultórica.
+      </p>
+      <div class="hero-links">
+        <a class="btn btn-yt" href="https://www.youtube.com/@MikelArce" target="_blank" rel="noopener">Canal de YouTube @MikelArce</a>
+        <a class="btn btn-primary" href="#docencia">Programas de Máster</a>
+      </div>
+    </section>
+
+    <!-- INSTALACIONES Y AUDIOVISUAL -->
+    <section id="obras">
+      <h3 class="section-title">Instalaciones Sonoras y Proyectos Audiovisuales</h3>
+      <div class="grid">
+        <!-- Vídeo *.WAV incrustado desde su canal -->
+        <div class="card">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/BvdRFM4A2Ac" title="*.WAV - Mikel Arce 2004" allowfullscreen></iframe>
+          </div>
+          <div class="card-body">
+            <span class="badge">Bourges 2004 — 1er Premio Internacional</span>
+            <h3>*.WAV</h3>
+            <p>Pieza de referencia galardonada en el 31ème Concours International de Musique et d'Art Sonore et Électroacoustiques de Bourges (categoría de Instalaciones y Entornos Sonoros).</p>
+          </div>
+        </div>
+
+        <!-- Arte Sonoro en España -->
+        <div class="card">
+          <div class="card-img-placeholder">
+            <span>[ Registro fotográfico: Dispositivos de audio y altavoces en sala ]</span>
+          </div>
+          <div class="card-body">
+            <span class="badge">Exposición Itinerante (2016 – 2018)</span>
+            <h3>Arte Sonoro en España (1961–2016)</h3>
+            <p>Participación en el recorrido histórico organizado por la Fundación Juan March (Madrid, Palma, Cuenca) y en el Museo Rufino Tamayo (México D.F.).</p>
+          </div>
+        </div>
+
+        <!-- Ars Electronica Alhondiga -->
+        <div class="card">
+          <div class="card-img-placeholder">
+            <span>[ Azkuna Zentroa — Instalación Interactiva ]</span>
+          </div>
+          <div class="card-body">
+            <span class="badge">Ars Electronica (2013)</span>
+            <h3>Artists as Catalysts</h3>
+            <p>Instalación exhibida en Azkuna Zentroa (Alhóndiga Bilbao) en colaboración con Ars Electronica.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERÁMICA Y MATERIA -->
+    <section id="ceramica">
+      <h3 class="section-title">Cerámica, Espacio y Experimentación Material</h3>
+      <div class="grid">
+        <div class="card">
+          <div class="card-img-placeholder">
+            <span>[ Foto de Google Fotos: Pieza Cerámica / Resonancia en Taller ]</span>
+          </div>
+          <div class="card-body">
+            <span class="badge">Investigación de Materia & Forma</span>
+            <h3>Más allá del soporte</h3>
+            <p>Exploración de la cerámica como medio expandido: piezas escultóricas, diálogo con el vacío acústico, resonadores cerámicos y cruce con procesos tecnológicos contemporáneos.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img-placeholder">
+            <span>[ Foto de Google Fotos: Registro de Galería / Exposición de Escultura ]</span>
+          </div>
+          <div class="card-body">
+            <span class="badge">Escultura & Forma</span>
+            <h3>Cuerpos y Resonancias</h3>
+            <p>Piezas desarrolladas en taller y exhibidas en espacios de arte, conjugando el modelado cerámico tradicional con la transducción sonora y el diseño volumétrico.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DOCENCIA Y MÁSTERES -->
+    <section id="docencia">
+      <h3 class="section-title">Docencia de Posgrado y Másteres Oficiales (UPV/EHU)</h3>
+      <div class="docencia-grid">
+        <!-- MACTP -->
+        <div class="doc-box">
+          <h4>mACTP — Arte Contemporáneo Tecnológico y Performativo</h4>
+          <p>Profesorado en la Facultad de Bellas Artes de la UPV/EHU, tutorización de TFM y docencia en el cruce de artes tecnológicas, sonido y prácticas performativas.</p>
+          <a href="https://www.ehu.eus/es/web/master/master-arte-contemporaneo-tecnologico-performativo" target="_blank" rel="noopener">Ver ficha del máster mACTP →</a>
+        </div>
+
+        <!-- Master Cerámica -->
+        <div class="doc-box">
+          <h4>Máster en Cerámica: Arte y Función</h4>
+          <p>Materia impartida: <strong>«Más allá del soporte: tecnología aplicada al ámbito de lo cerámico»</strong> (3 ECTS). Integración de nuevos medios, transducción y experimentación formal sobre el barro.</p>
+          <a href="https://www.ehu.eus/es/web/master/master-ceramica-arte-funcion" target="_blank" rel="noopener">Ver máster en Cerámica UPV/EHU →</a>
+        </div>
+
+        <!-- CYXAC -->
+        <div class="doc-box">
+          <h4>CYXAC — Conservación y Exhibición de Arte Contemporáneo</h4>
+          <p>Formación orientada a los retos de montaje, preservación y mediación de obras efímeras, electrónicas, cinéticas e instalaciones sonoras multicanal.</p>
+          <a href="https://www.ehu.eus/es/web/master/master-conservacion-exhibicion-arte-contemporaneo" target="_blank" rel="noopener">Ver máster CYXAC →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" style="margin-bottom: 4rem;">
+      <h3 class="section-title">Contacto</h3>
+      <p style="color: var(--muted);">Departamento de Escultura y de Arte y Tecnología — Facultad de Bellas Artes (UPV/EHU)</p>
+      <p style="margin-top: 0.6rem;">
+        Email institucional: <a href="mailto:mikel.arce@ehu.eus" style="color: var(--accent); text-decoration: none;">mikel.arce@ehu.eus</a>
+      </p>
+      <p style="margin-top: 0.3rem;">
+        Canal de YouTube: <a href="https://www.youtube.com/@MikelArce" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none;">youtube.com/@MikelArce</a>
+      </p>
+    </section>
+  </div>
+
+  <footer>
+    <p>© Mikel Arce — Artista Sonoro, Escultor e Investigador · UPV/EHU</p>
+  </footer>
+
+</body>
+</html>
